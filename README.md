@@ -8,4 +8,5 @@ Sends a specified amount of bytes of a file to the receiver.
 ## Usage
 
 `./reliable_receiver $port $filename`
+
 `./reliable_sender $receiver_name $receiver_port $filename $num_bytes_to_transfer`

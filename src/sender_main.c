@@ -202,7 +202,7 @@ int main(int argc, char **argv)
 
     if (argc != 5)
     {
-        fprintf(stderr, "usage: %s receiver_hostname receiver_port filename_to_xfer bytes_to_xfer\n\n", argv[0]);
+        fprintf(stderr, "missing arguments, usage: %s receiver_hostname receiver_port filename_to_xfer bytes_to_xfer\n\n", argv[0]);
         exit(1);
     }
     udpPort = (unsigned short int)atoi(argv[2]);

@@ -119,7 +119,7 @@ int main(int argc, char** argv) {
     unsigned short int udpPort;
 
     if (argc != 3) {
-        fprintf(stderr, "usage: %s UDP_port filename_to_write\n\n", argv[0]);
+        fprintf(stderr, "missing arguments, usage: %s UDP_port filename_to_write\n\n", argv[0]);
         exit(1);
     }
 

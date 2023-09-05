@@ -82,9 +82,7 @@ void reliablyReceive(unsigned short int myUDPport, char* destinationFile) {
             break;
         }
 
-        // printf("Received packet %d with size %d\n", packet.seq_num, packet.length);
         if (packet.seq_num == expected_num) {
-            // printf("Writing packet %d\n", packet.seq_num);
             packet.data[recv_bytes] = '\0'; // null terminate the data.
             fwrite(packet.data, sizeof (char), packet.length, fp);
 
@@ -94,7 +92,6 @@ void reliablyReceive(unsigned short int myUDPport, char* destinationFile) {
                 diep("sendto() failed");
             }
 
-            // printf("Sent ACK %d\n", ack_num);
             // increment expected_num
             expected_num = addSeqNum(expected_num, 1);
         } else {
